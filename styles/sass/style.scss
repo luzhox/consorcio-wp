@@ -1,11 +1,48 @@
 @charset "UTF-8";
+
+/* Main SCSS file for Consorcio WordPress Theme
+ * Organized by:
+ * - Basics: Core styles and layout
+ * - Components: Reusable UI elements
+ * - Pages: Page-specific styles
+ */
+
+/* Basics - Core styles and layout */
 @import "basics/_generics";
 @import "basics/_typo";
 @import "basics/_menu";
 @import "basics/_footer";
+
+/* Components - Reusable UI elements */
 @import "components/_articulo";
 @import "components/_articulos";
 @import "components/_modal";
 @import "components/_hero-principal";
 @import "components/_hero-blog";
+@import "components/_group-brand";
+@import "components/_events-home";
+@import "components/_metrics";
+@import "components/_last-activities";
+@import "components/_banner-intercambio";
+@import "components/_testimonial";
+@import "components/_testimonial-video";
+@import "components/_header-intercambio";
+@import "components/_benefits-program";
+@import "components/_inscription-guide";
+@import "components/_timeline";
+@import "components/_header-background";
+@import "components/_people-group";
+@import "components/_banner-text";
+@import "components/_new-articles";
+@import "components/_ancla";
+@import "components/_comission-group";
+@import "components/_events-list";
+@import "components/_publicaciones";
+@import "components/_comunicados-list";
+@import "components/_careers";
+@import "components/_header-video";
+@import "components/_other-presentations";
+@import "components/_gallery-full";
+@import "components/_text-wig";
+/* Pages - Page-specific styles */
 @import "pages/_404";

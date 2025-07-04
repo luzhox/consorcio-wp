@@ -1,0 +1,73 @@
+.metrics {
+  background: $brownAlt2;
+
+  &.medium {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    @include tablet {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include tablet {
+      justify-content: center;
+
+    }
+
+    &__item {
+      max-width: 280px;
+
+      @include mobile {
+        margin-bottom: 32px;
+      }
+
+      @include tablet {
+        margin-right: 24px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      h3,
+      p {
+        color: white;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 120%;
+        text-align: center;
+      }
+
+      h3 {
+        font-weight: 700;
+        line-height: 100%;
+        font-size: 60px;
+        text-align: center;
+        margin-bottom: 16px;
+
+        span {
+          font-weight: 700;
+          line-height: 100%;
+
+        }
+
+        @include tablet {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}

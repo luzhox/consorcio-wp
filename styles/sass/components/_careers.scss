@@ -1,0 +1,171 @@
+.careers {
+  .container {
+    padding-top: 0px;
+  }
+
+  &__menu {
+    width: 100%;
+    border-bottom: 1px solid #E2E1F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+
+    @include mobile {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    &__item {
+      color: #0D0704;
+      text-align: center;
+      font-family: $primary-text;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      background: transparent;
+      padding: 12px 24px;
+      width: max-content;
+      scroll-snap-align: center;
+      transition: ease-in-out .4s all;
+
+      min-width: max-content;
+
+      &.active {
+
+        font-weight: 700;
+        color: #A1411C;
+        border-bottom: 3px solid #A1411C;
+
+      }
+    }
+  }
+
+  &__content {
+    &__item {
+      display: none;
+      padding: 24px 0px;
+
+      @include tablet {
+        padding: 24px;
+      }
+
+      &__box {
+        margin-bottom: 24px;
+        box-shadow: 0px 4px 16px rgba(159, 160, 165, 0.45);
+        padding: 16px 24px;
+        max-height: 80px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: ease-in-out .4s all;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: wrap;
+
+        @include tablet {
+          padding: 24px 32px;
+        }
+
+        .buttons {
+          .btn__primary {
+            font-size: 14px;
+
+            @include mobile {
+              background: transparent;
+              color: $brownAlt;
+              text-decoration: underline;
+
+            }
+
+            @include tablet {
+              font-size: 16px;
+            }
+          }
+        }
+
+        &__content {
+          display: flex;
+          flex-flow: wrap;
+          padding: 0px;
+          width: 100%;
+          max-height: 0px;
+          overflow: hidden;
+        }
+
+        .careers__career {
+          opacity: 0;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 16px;
+          border-bottom: 1px solid #E2E1F9;
+          padding-bottom: 16px;
+          transition: ease-in-out .4s all;
+          max-height: 0px;
+          overflow: hidden;
+
+
+          &:last-child {
+            border: 0px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+          }
+
+          h4 {
+            font-size: 16px;
+            font-weight: 400;
+
+            @include tablet {
+              font-size: 18px;
+            }
+          }
+        }
+
+        &.active {
+          max-height: 100rem;
+
+          .careers__content__item__box__content {
+            padding: 24px 0px;
+            max-height: 100rem;
+          }
+
+          svg {
+            transform: rotate(180deg);
+          }
+
+          .careers__career {
+            opacity: 1;
+            max-height: 100rem;
+          }
+        }
+
+        &__head {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          width: 100%;
+        }
+
+        h3 {
+          font-size: 16px;
+          font-weight: 700;
+
+          @include tablet {
+            font-size: 18px;
+
+          }
+        }
+      }
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

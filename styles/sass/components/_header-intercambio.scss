@@ -1,0 +1,57 @@
+.header-intercambio {
+  background: #DBDDDF;
+
+  .container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0px;
+    padding-top: 32px;
+
+  }
+
+  &__text {
+    h1 {
+      color: #483127;
+      font-family: "DM Sans";
+      font-size: 54px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+      /* 59.4px */
+      letter-spacing: -0.8px;
+    }
+
+    p {
+      color: #483127;
+      font-family: "DM Sans";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.221px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+
+    }
+
+    .btn__primary {
+      vertical-align: middle;
+      margin-top: 16px;
+
+      svg {
+        vertical-align: middle;
+      }
+    }
+
+  }
+
+  &__img {
+    max-width: 620px;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}

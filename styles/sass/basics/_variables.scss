@@ -1,21 +1,25 @@
-$primary: #065A98;
-$primary-hover: #0668ad;
+$lightbrown:#FFC1A5;
+$brown:#A1411C;
+$brownAlt:#483127;
+$brownAlt2:#36180A;
+$darkbrown:#26140D;
+$primary: $brown;
+$primary-hover: #ba4f24;
 $color-primary-text-button:white;
-$color-sandwich: #98c9ec;
-$gray:#383A3F;
+$color-sandwich: $lightbrown;
+$gray:$darkbrown;
 $lightgray:#dbe3f2;
-
-
+$text-color:$gray;
 $colorMenuButton: white;
-$hoverDesktopSubMenu:#eff3fc;
-$colorActiveMenuText: #5daee8;
-$colorActiveMenu: #5daee8;
-$colorsSubMenu:#383A3F;
+$hoverDesktopSubMenu:$brownAlt2;
+$colorActiveMenuText: white;
+$colorActiveMenu: white;
+$colorsSubMenu:$brownAlt2;
 $bgSubMenu:white;
 
 $shadow: -0px 6px 20px rgba(0, 0, 0, 0.25);
 $overlay:linear-gradient(90deg, rgba(35, 28, 19, 0.6) 24.32%, rgba(47, 37, 25, 0) 100.16%);
-$primary-text:'Poppins',
+$primary-text:'DM Sans',
 Arial,
 Helvetica,
 sans-serif;

@@ -1,0 +1,68 @@
+.group-brand {
+  background: #FFF9F7;
+
+  .container {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+  }
+
+  &__text {
+    max-width: 564px;
+
+
+    h2,
+    h3 {
+      font-size: 28px;
+      line-height: 140%;
+      color: $brownAlt;
+      font-weight: 400;
+      text-rendering: geometricPrecision;
+      text-align: center;
+
+      @include tablet {
+        font-size: 48px;
+        text-align: left;
+      }
+
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    @include desktop {
+      margin-right: 40px;
+    }
+  }
+
+  &__brands {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    flex-flow: wrap;
+    position: relative;
+    top: 12px;
+    justify-content: center;
+
+    a {
+      max-width: 220px;
+      margin-bottom: 16px;
+
+      @include tablet {
+        max-width: 260px;
+      }
+
+      @include desktop {
+        margin-right: 16px;
+
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+}

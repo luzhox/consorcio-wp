@@ -1,137 +1,3 @@
-.articulo-principal {
-    height: calc(80vh - 100px);
-    background-size: cover !important;
-    margin-top: 60px;
-    overflow: hidden;
-    position: relative;
-
-    @include mobile {
-        max-height: 400px;
-    }
-
-    @include tablet {
-        background-attachment: fixed !important;
-        height: 514px;
-        max-height: 100%;
-        margin-top: 108px;
-    }
-
-    .overlay {
-        background-color: $overlay;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        left: 0px;
-        z-index: 1;
-
-        @include tablet {
-            height: 98vh;
-            max-height: 100%;
-            margin-top: 0px;
-            display: flex;
-            flex-flow: column;
-            justify-content: flex-end;
-            align-items: flex-end;
-        }
-
-        @include desktop {
-            background-position: center center !important;
-            background-size: cover !important;
-            text-align: left;
-        }
-    }
-
-    .texto {
-        background-size: cover !important;
-        z-index: 999999;
-
-        @include tablet {
-            top: 0;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            background-position: center bottom !important;
-            z-index: 999999;
-            background-attachment: fixed !important;
-            display: flex;
-            flex-flow: column;
-            justify-content: flex-end;
-            overflow: hidden;
-            margin: 0px;
-        }
-    }
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-flow: column;
-        -ms-flex-flow: column;
-        height: 100%;
-
-        h1 {
-            color: white;
-            font-size: calc(28px + 24 * ((100vw - 320px) / 820));
-            text-align: left;
-            display: inline;
-            font-weight: 500;
-
-            @include tablet {
-                max-width: 100%;
-                text-align: left;
-                font-size: calc(20px + 24 * ((100vw - 320px) / 820));
-            }
-
-            em {
-                color: $primary;
-                font-weight: 900;
-            }
-        }
-
-        p {
-            color: white;
-            font-size: 20px;
-            text-align: center;
-            font-weight: 300;
-            margin-top: 10px;
-
-            @include tablet {
-                text-align: left;
-            }
-        }
-
-        a {
-            padding: 20px 28px;
-            display: inline-block;
-            background-color: $primary;
-            color: white;
-            font-size: 18px;
-            margin-top: 28px;
-            text-align: center;
-            font-size: 16px;
-            text-transform: uppercase;
-            @include border-radius(8px);
-            @include transition(.3s);
-
-            cursor: pointer;
-            max-width: 230px;
-            box-shadow: 0px 0px 20px $primary;
-
-            &:hover {
-                background-color: $primary;
-                box-shadow: 0px 0px 10px $primary;
-            }
-
-            img {
-                height: 18px;
-                width: auto;
-                margin-left: 12px;
-            }
-        }
-    }
-}
-
 #articulos {
     h2.title {
         margin-top: 0px;
@@ -265,5 +131,140 @@
                 background-position: center !important;
             }
         }
+    }
+}
+
+.articulo-principal {
+
+    position: relative;
+
+    border-bottom: 1px solid rgb(201, 207, 238);
+    margin-bottom: 32px;
+
+    @include tablet {
+        background: $primary;
+        max-height: 550px;
+        min-height: 550px;
+        margin-bottom: 0px;
+        border: 0px;
+    }
+
+    .container {
+
+        display: flex;
+        align-items: center;
+
+        @include tablet {
+            min-height: 550px;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 512px;
+
+        background: #fff;
+        position: relative;
+        z-index: 2;
+
+        @include tablet {
+            margin-left: 40px;
+
+            .text {
+                padding: 18px 32px;
+
+            }
+        }
+
+        a {
+            width: 100%;
+            background: $primary;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #ffffff;
+            border-radius: 0px;
+
+            @include tablet {
+                text-transform: uppercase;
+                font-size: 18px;
+            }
+
+            &:hover {
+                background: $primary;
+            }
+
+            svg {
+                width: 24px !important;
+                height: auto !important;
+
+                path {
+                    fill: #231F20;
+                }
+
+                @include mobile {
+                    width: 20px !important;
+                    height: auto !important;
+                }
+            }
+        }
+
+        h3 {
+            color: #231F20;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 130%;
+            margin-bottom: 24px;
+            /* 127.636% */
+            letter-spacing: 1.404px;
+            font-family: $primary-text;
+
+            @include tablet {
+                font-size: 32px;
+            }
+        }
+
+        p {
+            color: black;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 300px;
+
+        @include tablet {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 550px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.prensa-footer p {
+    background: $lightgray;
+    padding: 24px;
+    text-align: center;
+    color: black;
+    font-family: $primary-text;
+    font-size: 18px;
+
+    strong {
+        font-weight: 700;
     }
 }

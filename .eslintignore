@@ -1,0 +1,3 @@
+# Ignorar archivos generados y dependencias
+build/
+node_modules/

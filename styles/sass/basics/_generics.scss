@@ -1,28 +1,26 @@
-@import "_mixins";
-@import "_grid";
-@import "_variables";
-@import "_buttons";
-@import "inputs";
+@import '_variables';
+@import '_mixins';
+@import '_grid';
+@import '_buttons';
+@import '_inputs';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     border: 0;
     text-decoration: none;
-    font-family: $primary-text;
-    font-weight: 400;
-    outline: 0px;
+    font-weight: 400; // Considerar si esto es necesario globalmente o mejor en body/elementos específicos
+    outline: 0; // Cuidado con la accesibilidad, considerar :focus-visible para outlines
 }
-
-
 
 body {
     margin: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; // Asegúrate de que esto no oculte contenido accesible horizontalmente de forma no intencionada
     width: 100%;
+    font-family: $primary-text; // Fuente primaria aplicada al body
+    color: $text-color; // Asumiendo que tienes una variable $text-color en _variables.scss
+    line-height: 1.6; // Una buena práctica para la legibilidad
 }
 
 button {
@@ -47,6 +45,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="number"] {
     -moz-appearance: textfield;
+    appearance: none;
 }
 
 .hide-on-small-only {
@@ -83,6 +82,9 @@ input[type="number"] {
 }
 
 .container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
     @include tablet {
         padding-top: 32px;
         padding-bottom: 32px;

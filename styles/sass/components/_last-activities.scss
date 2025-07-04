@@ -1,0 +1,129 @@
+.last-activities {
+  background: radial-gradient(84.95% 82.34% at 55.98% 93.3%, #9C451D 0%, #36180A 100%);
+
+  &__content {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      margin-top: 24px;
+      justify-content: center;
+    }
+
+    &__item {
+      max-width: 370px;
+      overflow: hidden;
+      height: 324px;
+      border-radius: 32px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 24px;
+      width: 100%;
+
+      .fulllink {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+      }
+
+      @include tablet {
+        margin-bottom: 0px;
+
+        &:nth-child(2n) {
+          position: relative;
+          top: -80px;
+        }
+      }
+
+      &__text {
+        position: relative;
+        z-index: 2;
+        padding: 24px;
+        text-align: center;
+
+        h3 {
+          color: white;
+          font-weight: 400;
+          letter-spacing: 0px;
+          text-rendering: geometricPrecision;
+          min-height: 60px;
+        }
+      }
+
+      &__image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.75) 100%);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center top;
+
+        }
+      }
+    }
+  }
+
+  .container {
+    @include mobile {
+      display: flex;
+      flex-flow: column-reverse;
+    }
+  }
+
+  &__title {
+    text-align: center;
+
+    p,
+    h2 {
+      color: white;
+    }
+
+    p {
+      color: #FFF;
+      text-align: center;
+      font-family: "DM Sans", sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      text-rendering: geometricPrecision;
+    }
+
+    h2 {
+      color: #FFF;
+      text-align: center;
+      font-family: "DM Serif Text";
+      font-size: 54px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -1.839px;
+      max-width: 390px;
+      margin-left: auto;
+      margin-right: auto;
+      text-rendering: geometricPrecision;
+    }
+  }
+}

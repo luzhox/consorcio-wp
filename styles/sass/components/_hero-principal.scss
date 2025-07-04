@@ -123,6 +123,65 @@
             &__content {
                 width: 100%;
 
+                a {
+                    @extend .btn__primary;
+                    margin-top: 16px;
+
+                    svg {
+                        vertical-align: middle;
+                    }
+                }
+
+                p {
+                    line-height: 120%;
+                    color: #ffffff;
+                    margin-top: 16px;
+                    font-weight: 400;
+                    text-rendering: geometricPrecision;
+                    font-size: 16px;
+
+                    strong {
+                        font-weight: 700;
+                    }
+
+                    @include tablet {
+                        max-width: 700px;
+                        font-size: 18px;
+
+                    }
+                }
+
+                h1 {
+                    font-family: $primary-text;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 52px;
+                    line-height: 64px;
+                    color: #ffffff;
+                    width: col(37, 37);
+                    max-width: 700px;
+                    margin-left: 0;
+                    font-weight: 700;
+                    text-rendering: geometricPrecision;
+
+                    strong {
+                        font-weight: 700;
+                    }
+
+                    @include mobile {
+                        width: auto;
+                        font-size: 32px;
+                        line-height: 39px;
+                        letter-spacing: -1px;
+                    }
+
+                    @media only screen and (min-width: 744px) and (max-width: 1199px) {
+                        width: auto;
+                        font-size: 44px;
+                        line-height: 52px;
+                    }
+                }
+
                 h2 {
                     font-family: $primary-text;
                     font-style: normal;
@@ -153,24 +212,7 @@
                     }
                 }
 
-                a {
-                    font-family: $primary-text;
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 20px;
-                    line-height: 24px;
-                    text-transform: uppercase;
-                    text-align: center;
-                    color: $color-primary-text-button;
-                    background: $primary;
-                    @include border-radius(8px);
-                    display: inline-block;
-                    padding: 16px 32px;
 
-                    &:hover {
-                        background: $primary-hover;
-                    }
-                }
 
                 @media only screen and (max-width: 1199px) {
                     width: 84%;
@@ -210,6 +252,12 @@
             color: #ffffff;
             display: flex;
             align-items: center;
+
+            svg {
+                vertical-align: middle;
+            }
+
+
 
             span {
                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='32' viewBox='0 0 21 32' fill='none'%3E%3Crect x='0.84' y='0.84' width='19.32' height='30.0533' rx='9.66' stroke='white' stroke-width='1.68'/%3E%3Crect x='9' y='5.60005' width='3' height='7.8' rx='1.5' fill='%23FCC74F'/%3E%3C/svg%3E");

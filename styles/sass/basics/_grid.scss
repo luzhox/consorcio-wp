@@ -36,11 +36,12 @@ $breakpoint-desktop: 1240px;
     overflow: initial;
 
     @include tablet {
+        width: 100%;
         max-width: 750px;
     }
 
     @include desktop {
-        max-width: 1184px;
+        max-width: 1240px;
         box-sizing: border-box;
     }
 }

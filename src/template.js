@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 $ = jQuery.noConflict()
 
 $(document).ready(function () {
@@ -21,7 +22,7 @@ $(document).ready(function () {
       }
     } else {
       const brand = $('#brand').data('brand')
-      if ($('#masthead').hasClass('proyect')) return $('#masthead').removeClass('actived')
+      if ($('#masthead').hasClass('proyect') || $('#brand').hasClass('brand--white')) return $('#masthead').removeClass('actived')
       $('#brand').attr('src', $('#brand').data('brandtwo'))
       $('#masthead').removeClass('actived'), $('#brand').attr('src', brand)
     }
@@ -49,11 +50,11 @@ $(document).ready(function () {
       element && observer.observe(element)
     }
 
-    function handleIntersect(entries, observer) {
+    function handleIntersect(entries) {
       entries.forEach(function (entry) {
-        if (entry.target === document.querySelector('.about-us__counters') && entry.intersectionRatio >= 0.5 && !localStorage.getItem('viewNumbers')) {
+        if (entry.target === document.querySelector('.metrics__content') && entry.intersectionRatio >= 0.5 && !localStorage.getItem('viewNumbers')) {
           localStorage.setItem('viewNumbers', true)
-          $('.about-us__count__animated').each(function () {
+          $('.numberAnimation').each(function () {
             $(this)
               .prop('Counter', 0)
               .animate(
@@ -84,10 +85,8 @@ $(document).ready(function () {
     if (document.getElementById('valuesBrand')) {
       createObserver(document.getElementById('valuesBrand'))
     }
-    if (document.getElementsByClassName('about-us__counters')[0]) {
-      createObserver(document.getElementById('valuesBrand'))
-
-      createObserver(document.getElementsByClassName('about-us__counters')[0])
+    if (document.getElementsByClassName('metrics__content')[0]) {
+      createObserver(document.getElementsByClassName('metrics__content')[0])
     }
   })
 
@@ -113,11 +112,11 @@ $(document).ready(function () {
     $('.site-header-nav').toggleClass('active')
   })
 
-  $('.input-field').focusin(function (e) {
+  $('.input-field').focusin(function () {
     $(this).addClass('active')
   })
 
-  $('.input-field').focusout(function (e) {
+  $('.input-field').focusout(function () {
     if ($(this).find('.wpcf7-form-control-wrap input').attr('value').length <= 0) {
       $(this).removeClass('active')
     } else if ($(this).find('.wpcf7-form-control-wrap input').attr('value').length >= 0) {
@@ -187,7 +186,12 @@ $(document).ready(function () {
   addCarousel('team__carousel', 0, 2, true, 0, 5, true, true, false, false, 3000, '', '', true, false, false, 0, false)
   addCarousel('success-stories__content', 0, 1, true, 32, 3, false, false, false, false, 3000, '', '', false, 4, false, 40)
   addCarousel('header-principal__text__carousel', 0, 1, true, 0, 1, true, false, false, true, 4000)
-
+  addCarousel('testimonial-slider', 0, 1, true, 0, 1, true, false, true, true, 5000, '', '')
+  addCarousel('testimonial-video-slider', 0, 1, true, 0, 1, true, false, true, true, 5000, '', '')
+  addCarousel('timeline__content', 0, 3, true, 32, 4, false, true, false, false, 4000, '', '', true, 1, false, 40)
+  addCarousel('galeriaBlog', 0, 1, true, 0, 1, true, true, false, true, 5000, '', '', false, 1, false, 0)
+  addCarousel('gallery-full', 0, 1, true, 0, 3, true, false, false, true, 5000, '', '', false, 1, false, 0)
+  testimonial - video
   if (window.matchMedia('(min-width: 900px)').matches) {
     $('.hero-service__buttons').addClass('owl-carousel owl-theme')
     addCarousel('hero-service__buttons', 0, 3, true, 0, 5, false, true, false, false, 4000, '', '', false, 5, false, 20, false)
